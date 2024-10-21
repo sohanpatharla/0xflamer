@@ -20,7 +20,13 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch((err) => console.error('Error connecting to MongoDB:', err));
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Routes

@@ -43,11 +43,15 @@ const FLAMESCalculator = () => {
 
       // Send the data to the backend
       try {
-        await axios.post('http://localhost:5000/api/flames', {
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/flames`, {
           name1,
           name2,
           relation: result
         });
+        // const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/flames`, {
+        //   name1,
+        //   name2,
+        // });
         console.log('Data saved to MongoDB');
       } catch (error) {
         console.error('Error saving data:', error);
