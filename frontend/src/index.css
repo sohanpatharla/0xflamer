@@ -2,9 +2,17 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #ffe6f2; /* Light pink background */
 }
 
+/* Global styles for SVG */
 svg {
   margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
 }

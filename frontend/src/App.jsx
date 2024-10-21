@@ -16,10 +16,10 @@ const App = () => {
     palette: {
       mode: darkMode ? 'dark' : 'light',
       primary: {
-        main: darkMode ? '#90caf9' : '#1976d2',
+        main: darkMode ? '#ff8ab0' : '#ff4081', // Pink shades
       },
       background: {
-        default: darkMode ? '#121212' : '#f5f5f5',
+        default: darkMode ? '#121212' : '#ffe6f2', // Light pink background
       },
     },
     typography: {
@@ -34,7 +34,8 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" sx={{ flexGrow: 1 }}>FLAMES Calculator</Typography>
+          <Typography variant="h6" sx={{ flexGrow: 1 }} color="#FFFFFF">FLAMES Calculator</Typography>
+
             <IconButton onClick={toggleTheme} color="inherit">
               {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
